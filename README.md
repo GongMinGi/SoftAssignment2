@@ -39,5 +39,38 @@
 원격 저장소에 덮어쓰는 역할을 하는 명령어라는 것을 알 수 있다.
 
 ## pull
+- 이제 지금까지 원격저장소에서 작성한 README파일을 로컬저장소로 가져올 것이다. 
+- 그러기위해서 git pull 명령어를 사용한다.
+
+![9 pull](https://user-images.githubusercontent.com/76468280/117531049-7cd6f580-b01b-11eb-9bb3-e5f3cadad0d3.PNG)
+
+- 이 명령어를 사용하면 원격저장소에 있는 데이터를 로컬 저장소에 똑같이 복사할 수 있다.
 
 
+## branch, merge, log
+- 현재 문서의 상태는 그대로 보존시키고, 따로 작업을 한후 합치고싶다. 그럴 때는 새로운 git branch <name> 을 통해 새로운 브랜치를 만들어 작업하면 됀다.
+
+![10 branch 작성, checkout](https://user-images.githubusercontent.com/76468280/117531181-451c7d80-b01c-11eb-86e5-fa5fc61f6e6c.PNG)
+
+- git branch를 통해 현재 존재하는 브랜치와 현재 작업중인 브랜치를 확인할 수 있고, 위와 같이 git branch support 를 통해 support 라는 이름의 새로운 브랜치를 생성할 수도 있다.
+- 새로운 branch를 생성한 후 git checkout 을 이용하면 작업중인 브랜치를 변경하는 것이 가능하다.
+- 이제 support 브랜치에서 Markdown 문서를 좀더 작성해 보자.
+
+![11  support 에서 작성, commit push](https://user-images.githubusercontent.com/76468280/117531248-a2b0ca00-b01c-11eb-93e6-615fc78b292e.png)
+
+- 위에서 한 것처럼 똑같이 문서를 수정하고 commit 해주면됀다.
+- commit 이후 git log 명령어를 사용하면 commit의 결과를 좀더 가시적으로 볼 수 있다.
+
+![12  log](https://user-images.githubusercontent.com/76468280/117531273-b3f9d680-b01c-11eb-830c-4eccb4378f75.PNG)
+
+- 보다시피 log 명령어는 우리가 지금까지 해온 commit을 보여주는 명령어이다.
+- 잘보면 HEAD, 즉 우리가 작업하는 브랜치가 Support를 가리키고 있고, 방금 진행한 커밋이 다른 branch인 main에는 전혀 영향을 끼치지 않는 것을 볼 수 있다.
+- 그럼 이제, 작업한 내용은 main branch에 합칠 차례다.
+
+![13 merge](https://user-images.githubusercontent.com/76468280/117531540-d9d3ab00-b01d-11eb-9111-2fd213a47ea9.PNG)
+
+- support branch를 main에 합치기 위해선 우선 checkout 을 이용해 작업브랜치를 main으로 바꾸고 그다음 merge 명령어를 이용해 병합하면된다.
+
+![14  merge 후 log](https://user-images.githubusercontent.com/76468280/117531569-0687c280-b01e-11eb-8991-873c24513369.PNG)
+
+- 이후 log 명령어를 사용하면 main 과 support 두개가 똑같은 commit을 가리키는 것을 볼 수 있다.
