@@ -157,6 +157,6 @@
   |push | O |[링크](#commit-과-push)|
   |rebase | O |[링크](#rebase)|
   |remote | O |[링크](#remote)|
-  |reset --hard| O |[링크](#reset-hard)|
+  |reset hard| O |[링크](#reset-hard)|
   |status | O |[링크](#commit-과-push)|
   |tag | O |[링크](#tag)|
