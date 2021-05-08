@@ -85,7 +85,7 @@
 
 - 이후 log 명령어를 사용하면 main 과 support 두개가 똑같은 commit을 가리키는 것을 볼 수 있다.
 
-## reset --hard
+## reset
 - 이후 몇 번의 commit 이후 심각한 버그가 발생해 그 이전 시점으로 문서를 돌리고 싶다.
 - 실수로 일어난 커밋을 수정하거나, 지우고 싶을 때 reset 명령어를 사용할 수 있다. 
 
@@ -157,6 +157,6 @@
   |push | O |[링크](#commit-과-push)|
   |rebase | O |[링크](#rebase)|
   |remote | O |[링크](#remote)|
-  |reset hard| O |[링크](#reset-hard)|
+  |reset --hard| O |[링크](#reset)|
   |status | O |[링크](#commit-과-push)|
   |tag | O |[링크](#tag)|
