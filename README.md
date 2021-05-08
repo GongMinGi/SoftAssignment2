@@ -153,7 +153,7 @@
   |init | O |[링크](#로컬-저장소-생성)|
   |log | O |[링크](#branch-merge-log)|
   |merge | O |[링크](#branch-merge-log)|
-  |pull | O |[링크](#-pull)|
+  |pull | O |[링크](#pull)|
   |push | O |[링크](#commit-과-push)|
   |rebase | O |[링크](#rebase)|
   |remote | O |[링크](#remote)|
