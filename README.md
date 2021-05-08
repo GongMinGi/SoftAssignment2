@@ -142,19 +142,21 @@
 
 ## 표
 
-| add | O |
-| branch | O|
-| checkout | O |
-| clone | O |
-| commit | O |
-| config | O |
-| init | O |
-| log | O |
-| merge | O |
-| pull | O |
-| push | O |
-| rebase | O |
-| remote | O |
-| reset --hard| O |
-| status | O |
-| tag | O |
+  |명령어|존재여부|링크|
+  |---|---|---|
+  |add | O |[commit 과 push ](#commit-과-push)|
+  |branch | O |[링크](#branch-merge-log)|
+  |checkout | O |
+  |clone | O |
+  |commit | O |
+  |config | O |
+  |init | O |
+  |log | O |
+  |merge | O |
+  |pull | O |[링크](#-pull)|
+  |push | O |
+  |rebase | O |
+  |remote | O |
+  |reset hard| O |
+  |status | O |
+  |tag | O |
