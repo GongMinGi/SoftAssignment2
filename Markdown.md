@@ -65,3 +65,73 @@ ___
 -  탈출: 코드로 나타낼 단어 또는 구문에 하나 이상의 백틱(')이 포함되어있다면, 단어 또는 구문을 이중 백틱('')으로 묶으면 탈출 할 수 있습니다.
    -  예시: `` 이것은 `예시 문장` 입니다. ``
 
+
+
+
+## 7. 링크
+- 링크를 만들려면 대괄호 안에 제목을 적어넣고 그 뒤에 바로 괄호를 입력하고 그 안에 링크를 넣으면 됀다.
+  - ex) [Duck Duck Go] (https://duckduckgo.com).
+  - = 내가 좋아하는 검색엔진은 [Duck Duck Go](https://duckduckgo.com)다.
+
+- 제목 넣기 : 링크에 추가로 제목을 넣을 수 있다. 아래 예시 처럼 링크 뒤에 ("") 를 이용해서 제목을 넣을 수 있는데, 이 경우 링크에 마우스를 올리면 입력한 내용이 보여진다.
+  - 내가 좋아하는 검색엔진은  [Duck Duck Go] (https://duckduckgo.com "The best search engine for privacy")이다.
+  - = 내가 좋아하는 검색엔진은 [Duck Duck Go](https://duckduckgo.com "The best search engine for privacy")이다.
+
+- URL과 이메일 주소: <> 안에 URL과 메일주소를 입력하는 것으로 간단히 링크를 걸 수 있다.
+  - < https://www.markdownguide.org > , < fake@example.com >
+  - <https://www.markdownguide.org>
+  - <fake@example.com>
+
+
+-  링크 강조: 링크를 강조하기 위해서는 대괄호 전과 소괄호후에 (*) 를 사용하면 되고, 코드로 만들기 위해선 괄호안에 ('')을 추가해야 한다.<br>
+
+        I love supporting the **[EFF](https://eff.org)**.
+        This is the *[Markdown Guide](https://www.markdownguide.org)*.
+        See the section on [`code`](#code).
+    결과는 이렇게 나온다.
+
+    I love supporting the **[EFF](https://eff.org)**.<br>
+    This is the *[Markdown Guide](https://www.markdownguide.org)*.<br>
+    See the section on [`code`](#code).
+
+- 참조 스타일 링크: 참조 스타일 링크는 URL을 마크다운에서 쉽게 표시하고 읽을 수 있도록 하는 특수한 종류의 링크이며 총 2단계로 구성된다.
+  - 1단계
+  
+    첫번쨰 부분은 두 개의 괄호로 구성되며 첫번째 대괄호는 링크된 것으로 표시되는 텍스트를 둘러싸며, 두번 째 괄호는 문서의 다른곳에 저장된 링크를 가리키는데 사용된다.<br>
+    ex) [hobbit-hole][1]<br>
+        [hobbit-hole] [1]
+
+    괄호사이에 스페이스바를 넣어도 상관없다.
+  - 2단계
+
+    두 번째 부분은 실제 링크가 저장되 있는 장소이며, 이는 문서 어디에든 올 수 있다. 즉 주석처럼 사용할 수 있다는 의미이다. 다음 표기는 모두 같은 의미를 가진다.
+
+        [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle
+        [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
+        [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle 'Hobbit lifestyles'
+        [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle (Hobbit lifestyles)
+        [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
+        [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> 'Hobbit lifestyles'
+        [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> (Hobbit lifestyles)
+  - 예시
+
+        In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+        of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+        eat: it was a [hobbit-hole][1], and that means comfort.
+
+        [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
+        이 문장은 다음과 같이 출력된다.
+
+
+        In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a [hobbit-hole][1], and that means comfort.
+
+    [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
+
+
+- 이미지 링크: 이미지 자체에 링크를 걸기 위해 마크다운 언어로 표기한 이미지에 대괄호를 씌운뒤 다음 소괄호 안에 링크를 적는다.
+
+        [![An old rock in the desert](.\image\shiprock.jpg "Shipr ock, New Mexico by Beau Rogers")](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)
+
+     결과는 이렇게 나온다.
+
+     [![An old rock in the desert](.\image\shiprock.jpg "Shipr ock, New Mexico by Beau Rogers")](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)
