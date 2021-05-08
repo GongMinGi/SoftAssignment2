@@ -74,3 +74,60 @@
 ![14  merge 후 log](https://user-images.githubusercontent.com/76468280/117531569-0687c280-b01e-11eb-8991-873c24513369.PNG)
 
 - 이후 log 명령어를 사용하면 main 과 support 두개가 똑같은 commit을 가리키는 것을 볼 수 있다.
+
+## reset --hard
+- 이후 몇 번의 commit 이후 심각한 버그가 발생해 그 이전 시점으로 문서를 돌리고 싶다.
+- 실수로 일어난 커밋을 수정하거나, 지우고 싶을 때 reset 명령어를 사용할 수 있다. 
+
+![15  reset 전](https://user-images.githubusercontent.com/76468280/117535690-e95cef00-b031-11eb-9507-41da60dfb7ad.PNG)
+![16  reset --hard 후](https://user-images.githubusercontent.com/76468280/117535711-0396cd00-b032-11eb-913a-497105193321.PNG)
+
+- 위와 같이 reset --hard 에 특정commit의 해시값을 입력하면 그 다음에 발생한 커밋부터 전부 지워지게 된다. 특히 --hard 명령어를 사용해 지운 commit은 복구할 수 없기 때문에 
+주의가 필요하다.
+
+## rebase
+- commit 도중 commit 메세지를 잘못 입력하여 이 메세지를 고쳐야한다.
+- rebase 명령어를 이용하면 이전에 진행한 커밋을 수정하는 것이 가능하다.
+
+![17 rebase 전](https://user-images.githubusercontent.com/76468280/117535849-a7807880-b032-11eb-89b7-9a97c7aee8ca.PNG)
+
+- 위 그림에서는 Markdown3 이 2개 존재하고 하나는 "까지 붙어 있다. 이를 수정하기 위해 git rebase -i HEAD~3 을 이용하자. HEAD~3은 HEAD로부터 3개의 commit을 수정하겠다는 소리다.
+
+![18 rebase옵션](https://user-images.githubusercontent.com/76468280/117535880-e6163300-b032-11eb-88bb-5834334c994c.PNG)
+
+- 명령어를 입력하면 위와 같은 화면이 뜬다. Commands 아래는 사용할 수 있는 명령어의 개수와 설명이다. 이 중 우리가 원하는것은 commit 메세지를 수정하는 reword다.
+이를 pick을 대신해 입력해주면 됀다.
+
+![19 rebase 수정](https://user-images.githubusercontent.com/76468280/117535917-2aa1ce80-b033-11eb-9505-2d521ac3ab73.PNG)
+
+- 그리하여 이런 화면이 떳다면, 맨 위쪽에 쓰고 싶은 메세지를 쓴 뒤 wq!명령어로 저장후 나오면 그대로 commit에 적용된다. 아래는 적용된 모습이다.
+
+![20  rebase 후](https://user-images.githubusercontent.com/76468280/117535941-51f89b80-b033-11eb-98d3-bb3245b7a79d.PNG)
+
+- rebase의 다른 옵션으로 drop이 있는데, 이는 commit 하나를 삭제하여 없었던 것처럼 만드는 명령으로, reset --hard와 달리 1개의 commit을 지정하여 제거할 수 있다.
+
+## remote
+- clone으로 불러온 로컬저장소가 원격저장소를 가리키는 이름은 origin으로 설정된다. 이를 원격저장소의 이름과 똑같이 바꾸고 싶다.
+- remote 명령어는 원격저장소를 관리하기 위한 명령어이다.
+
+![21  remote rename](https://user-images.githubusercontent.com/76468280/117536052-efec6600-b033-11eb-8c92-fb6da0a31b93.PNG)
+
+- git remote를 입력하면 현재 로컬저장소에 등록된 원격저장소의 목록이 출력된다. 
+- git remote show <name> 을 입력하면 입력한 원격저장소에 대한 구체적인 설명이 출력된다.
+- 그리고 git remote rename <원래이름> <바꿀이름> 을 입력하면 가리키는 원격저장소의 이름을 바꿀 수 있다. 
+
+## tag
+- 문서를 작성한 이후 그 문서에 버전을 붙이고 싶다.
+- tag를 이용하면 프로젝트의 버전을 관리할 수 잇다.
+- Git의 태그는 Lightweight 태그와 Annotated 태그로 두 종류가 있다.
+- Lightweight 태그는 브랜치와 비슷한데 브랜치처럼 가리키는 지점을 최신 커밋으로 이동시키지 않는다. 단순히 특정 커밋에 대한 포인터일 뿐이다.
+- Annotated 태그는 Git 데이터베이스에 태그를 만든 사람의 이름, 이메일과 태그를 만든 날짜, 그리고 태그 메시지도 저장한다
+- 일반적으로 Annotated 태그를 만들어 이 모든 정보를 사용할 수 있도록 하는 것이 좋다. 하지만 임시로 생성하는 태그거나 이러한 정보를 유지할 필요가 없는 경우에는 Lightweight 태그를 사용할 수도 있다
+
+![22   tag 1 0](https://user-images.githubusercontent.com/76468280/117536249-f29b8b00-b034-11eb-9320-b8191c50595a.PNG)
+
+- git tag 명령어는 현재 존재하는 tag를 보여주는 명령어이다.
+- git tag -a <version> -m "<message>" 를 이용해 annotated 태그를 만들수 있다. 또한, git show <version> 명령어는 지정한 태그의 세부적인 내용을 보여주는 명령어이다.
+
+
+
