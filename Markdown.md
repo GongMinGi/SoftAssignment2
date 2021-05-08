@@ -55,7 +55,7 @@ ___
 - 이미지: 이미지를 입력하려면 !를 적은 대괄호 안의 제목을 입력하고 괄호안에 경로를 입력하면 된다.
   <br> ex: ! [해바라기] (.\image\해바라기.jpg)
 
- ![해바라기](.\image\해바라기.jpg)
+![해바라기](https://user-images.githubusercontent.com/76468280/117534069-d85caf80-b02a-11eb-9911-693535a7d5a9.jpg)
 
  - 리스트중첩: tab을 1번 입력하여 리스트 내부에 다른 리스트를 만들 수 도 있다.
    - 이런 형태의 리스트가 만들어진다.
@@ -135,3 +135,41 @@ ___
      결과는 이렇게 나온다.
 
      [![An old rock in the desert](.\image\shiprock.jpg "Shipr ock, New Mexico by Beau Rogers")](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)
+
+## 8.문자열 탈출
+ - 마크다운 언어에서 서식으로 쓰이는 문자들을 표기하기 위해서 \를 사용한다. <br>다음은 예시이다.
+  
+        \* Without the backslash, this would be a bullet in an unordered list.
+    이는 다음과 같이 출력된다.
+
+        * Without the backslash, this would be a bullet in an unordered list.
+
+
+    아래 문자들이 \를 통해 탈출할 수 있는 문자들이다.
+
+    |문자|문자명|
+    |---|---|
+    |\ | 백슬래쉬|
+    |` | 그래이브|
+    |* | 에스터리스크|
+    |_ | 언더바|
+    |{}| 중괄호|
+    |[]| 대괄호|
+    |<>| 앵글브래킷(부등호)|
+    |()| 괄호|
+    |# | 샵 |
+    |+ | 플러스|
+    |- | 마이너스|
+    |. | 점|
+    |! | 느낌표|
+    |\|| 파이프|
+
+## 9. HTML
+- 많은 마크다운 응용 프로그램에서는 html 태그를 마크다운 언어로 사용하는걸 가능하게 해준다. 이는 마크다운 언어보다 특정 html 태그를 선호하는 경우에 유용하다. 예를 들어 몇몇 사람들은 이미지에 HTML 태그를 사용하는 것이 더 쉽다고 생각한다.<br>다음은 HTML태그를 사용한 이탈릭체와 마크다운 언어를 사용한 굵은 글씨다.
+
+        This **word** is bold. This <em>word</em> is italic
+
+    This **word** is bold. This <em>word</em> is italic.  이렇게 출력됀다.
+
+## 10. 깃허브 링크
+<https://github.com/GongMinGi/GFMpractice>
