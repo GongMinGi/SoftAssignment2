@@ -144,19 +144,19 @@
 
   |명령어|존재여부|링크|
   |---|---|---|
-  |add | O |[commit 과 push ](#commit-과-push)|
+  |add | O |[링크](#commit-과-push)|
   |branch | O |[링크](#branch-merge-log)|
-  |checkout | O |
-  |clone | O |
-  |commit | O |
-  |config | O |
-  |init | O |
-  |log | O |
-  |merge | O |
+  |checkout | O |[링크](#branch-merge-log)|
+  |clone | O |[링크](#로컬-저장소-생성)|
+  |commit | O |[링크](#commit-과-push)|
+  |config | O |[링크](#기본-환경-설정)|
+  |init | O |[링크](#로컬-저장소-생성)|
+  |log | O |[링크](#branch-merge-log)|
+  |merge | O |[링크](#branch-merge-log)|
   |pull | O |[링크](#-pull)|
-  |push | O |
-  |rebase | O |
-  |remote | O |
-  |reset hard| O |
-  |status | O |
-  |tag | O |
+  |push | O |[링크](#commit-과-push)|
+  |rebase | O |[링크](#rebase)|
+  |remote | O |[링크](#remote)|
+  |reset --hard| O |[링크](#reset-hard)|
+  |status | O |[링크](#commit-과-push)|
+  |tag | O |[링크](#tag)|
