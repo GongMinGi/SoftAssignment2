@@ -1,6 +1,16 @@
 ## URL: https://github.com/GongMinGi/SoftAssignment2.git
 
-## 1.로컬 저장소 생성
+## 기본 환경 설정
+- git을 설치한 이후 명령프롬포트를 이용해 기초적인 환경을 설정한다.
+
+![1 git config 기본설정](https://user-images.githubusercontent.com/76468280/117536357-92f1af80-b035-11eb-8232-3c8e11a4aa41.PNG)
+
+- git config 를 사용하여 설정내용을 확인하고 변경할 수 있다.
+- 가장 먼저 해야할 것을 사용자 설정으로 깃이 commit 할 때 사용할 사용자의 이름과 메일의 주소이다. --global로 설정하는 건 한번 이면 되며,
+만약 프로젝트마다 다른 이름과 주소를 사용하고 싶다면 --global 옵션을 빼고 명령을 실행하면 된다.
+- git config --list를 사용하면 설정한 모든것을 한 번에 볼 수 있다.
+
+## 로컬 저장소 생성
 - 로컬 저장소를 생성하는 방법에는 2가지가 있다. 첫째로 git init 을 통해 새로 로컬 저장소를 만드는 방법과, git clone <url> 을 통해 github의 데이터를 불러오는 방식이다.
 
 
@@ -130,4 +140,21 @@
 - git tag -a <version> -m "<message>" 를 이용해 annotated 태그를 만들수 있다. 또한, git show <version> 명령어는 지정한 태그의 세부적인 내용을 보여주는 명령어이다.
 
 
+## 표
 
+| add | O |
+| branch | O|
+| checkout | O |
+| clone | O |
+| commit | O |
+| config | O |
+| init | O |
+| log | O |
+| merge | O |
+| pull | O |
+| push | O |
+| rebase | O |
+| remote | O |
+| reset --hard| O |
+| status | O |
+| tag | O |
